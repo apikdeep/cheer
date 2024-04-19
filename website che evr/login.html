@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Vehicle Revolution</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+        header img {
+            max-width: 200px;
+            height: auto;
+        }
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .section p {
+            font-size: 16px;
+        }
+        .login-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .login-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./the-future-of-electric-vehicles.jpg" alt="Company Logo">
+        <h1>Electric Vehicle Revolution CA 1 </h1>
+    </header>
+    <div class="container">
+        <div class="section">
+            <img class="hero-image" src="./electric-vehicles-main-image.jpg" alt="Electric Car">
+            <h3>Welcome to the Future of Transportation</h3>
+            <p>Are you ready to embrace the electric revolution? Join us as we pave the way towards a greener, more sustainable future with electric vehicles.</p>
+        </div>
+        <div class="section">
+            <h2>HELLO SIR</h2>
+            <p>the username is my first name in small and password is my roll no.</p>
+            
+        </div>
+        <div class="section">
+            <h2>Login</h2>
+            <form class="login-form" action="javascript:void(0);" onsubmit="login()">
+                <input type="text" id="username" placeholder="Username (ID)">
+                <input type="password" id="password" placeholder="Password">
+                <input type="submit" value="Login">
+            </form>
+        </div>
+        <div>
+            <h3>Team members </h3>
+            <ol>
+                <li>Abhijeet rao (30)</li>
+                <li>Harsh (28)</li>
+                <li>Bhanu (30)</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Check if credentials match
+            if (username === "abhijeet" && password === "30") {
+                // Redirect to home page
+                window.location.href = "./video.html";
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Vehicle Revolution</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        #battery {
+            width: 200px;
+            height: 200px;
+            background-color: #555;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s infinite alternate;
+        }
+        #battery::before {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background-color: #6bf;
+            animation: charge 2s infinite alternate;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.2);
+            }
+        }
+        @keyframes charge {
+            0% {
+                left: -50%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+        .colorful {
+            color: #ff7f00; /* orange */
+        }
+        .car {
+            width: 200px;
+            height: 100px;
+            background-color: #4CAF50;
+            position: relative;
+            margin: 20px auto;
+            animation: drive 4s linear infinite;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .car::before, .car::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            border-radius: 50%;
+            bottom: 0;
+        }
+        .car::before {
+            left: 20px;
+        }
+        .car::after {
+            right: 20px;
+        }
+        .car-text {
+            position: absolute;
+            bottom: -30px;
+            width: 100%;
+            font-size: 16px;
+        }
+        @keyframes drive {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>The <span class="colorful">Electric Vehicle</span> Revolution</h1>
+    <img src="./Future-electric-vehicles.jpg" alt="Electric Car" style="width: 300px; height: auto;">
+    <div id="battery"></div>
+    <h2>History of Electric Vehicles</h2>
+    <p>Electric vehicles have a long history, dating back to the 19th century. They were popular in the early 20th century, but lost ground to gasoline-powered cars due to limitations in battery technology.</p>
+    <p>In recent decades, concerns over climate change and air pollution have reignited interest in electric vehicles as a cleaner alternative to traditional gasoline cars.</p>
+    <h2>Future of Electric Vehicles</h2>
+    <p>The future of electric vehicles is promising, with advancements in battery technology, government incentives, and growing environmental awareness driving their adoption.</p>
+    <p>Major automakers are investing heavily in electric vehicle development, with plans to phase out internal combustion engines in favor of electric powertrains.</p>
+    <p>As technology continues to improve and charging infrastructure expands, electric vehicles are poised to become the primary mode of transportation, ushering in a cleaner, greener future for mobility.</p>
+    <div class="car" onclick="window.location.href='./home page.html'">
+        <div class="car-text">Click the car to proceed</div>
+    </div>
+</body>
+</html>

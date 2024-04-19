@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Electric Car</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Hide horizontal scrollbar */
+            background: linear-gradient(to bottom, #007bff, #00bfff); /* Colorful gradient background */
+        }
+        .car-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+        .car {
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            top: calc(50% - 50px); /* Center the car vertically */
+            left: 0; /* Start car at the left edge of the viewport */
+            animation: drive 10s linear infinite; /* Apply animation */
+            cursor: pointer; /* Show pointer cursor on hover */
+        }
+        .car .car-body {
+            width: 100%;
+            height: 100%;
+            background-color: #4CAF50; /* Electric green color for car body */
+            border-radius: 15px; /* Increased border radius for a smoother look */
+            position: relative;
+            overflow: hidden; /* Hide overflow for cleaner appearance */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+        }
+        .car .headlights {
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 5px 0 0 #fff, 10px 0 0 #fff;
+        }
+        .car .windows {
+            position: absolute;
+            top: 40px;
+            width: 60px;
+            height: 30px;
+            background-color: #ccc;
+            border-radius: 10px; /* Rounded windows */
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3); /* Add inner shadow for depth */
+        }
+        .car .wheels {
+            position: absolute;
+            bottom: 0;
+            width: 50px;
+            height: 50px;
+            background-color: #333; /* Dark color for wheels */
+            border-radius: 50%;
+            animation: rotateWheels 1s linear infinite; /* Rotate wheels animation */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+        }
+        .car .wheels.left {
+            left: 20px;
+        }
+        .car .wheels.right {
+            right: 20px;
+        }
+        .message {
+            position: absolute;
+            bottom: 20px;
+            text-align: center;
+            width: 100%;
+            color: #fff;
+            font-size: 18px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow for readability */
+        }
+        @keyframes drive {
+            0% {
+                transform: translateX(-200px); /* Move car off-screen to the left */
+            }
+            100% {
+                transform: translateX(100vw); /* Move car off-screen to the right */
+            }
+        }
+        @keyframes rotateWheels {
+            100% {
+                transform: rotate(360deg); /* Rotate wheels */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="car-container">
+        <div class="car" onclick="redirectToHome()">
+            <div class="car-body">
+                <div class="headlights"></div>
+                <div class="windows"></div>
+                <div class="wheels left"></div>
+                <div class="wheels right"></div>
+            </div>
+        </div>
+        <div class="message">Click the car to proceed</div>
+    </div>
+
+    <!-- Add audio element for car sound -->
+    <audio id="carSound" src="movement-200697.mp3" preload="auto"></audio>
+    <audio controls autoplay>
+        <source src="./movement-200697.mp3" type="audio/mpeg">
+      </audio>
+      
+
+    <script>
+        function redirectToHome() {
+            // Play the car sound
+            var carSound = document.getElementById("carSound");
+            carSound.play();
+            
+            // Redirect to home.html after a delay
+            setTimeout(function() {
+                window.location.href = "./login.html";
+            }, 1000); // Adjust the delay as needed to match the sound duration
+        }
+    </script>
+</body>
+</html>
